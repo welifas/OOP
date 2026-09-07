@@ -15,16 +15,14 @@ class Palindrome {
             loworig += ch;
         }
 
-        String reverse = "";
-        for(int i = loworig.length() - 1; i >=0; i--) { 
-            char ch = loworig.charAt(i);
-            reverse += ch;
-        }
-
         boolean palindrome = true;
-        for(int i = 0; i < loworig.length() ; i++) {
-            if(loworig.charAt(i) != reverse.charAt(i)) {
+        for(int i = 0; i < loworig.length() / 2; i++) {
+            char left = loworig.charAt(i);
+            char right = loworig.charAt(loworig.length() - 1 - i);
+            
+            if(left != right) {
                 palindrome = false;
+                break;
             }
         }
 
