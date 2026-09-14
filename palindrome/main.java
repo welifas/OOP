@@ -31,5 +31,7 @@ class Palindrome {
         } else {
             System.out.println("not a palindrome");
         }
+
+        word.close();
     }
 }
