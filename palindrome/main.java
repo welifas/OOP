@@ -6,19 +6,19 @@ class Palindrome {
         Scanner word = new Scanner(System.in);
         String original = word.nextLine();
 
-        String loworig = "";
+        String lowOrig = "";
         for(int i = 0; i < original.length() ; i++) {
             char ch = original.charAt(i);
             if(ch >= 'А' && ch <= 'Я' || ch >= 'A' && ch <= 'Z') {
                 ch = (char)(ch + 32);
             }
-            loworig += ch;
+            lowOrig += ch;
         }
 
         boolean palindrome = true;
-        for(int i = 0; i < loworig.length() / 2; i++) {
-            char left = loworig.charAt(i);
-            char right = loworig.charAt(loworig.length() - 1 - i);
+        for(int i = 0; i < lowOrig.length() / 2; i++) {
+            char left = lowOrig.charAt(i);
+            char right = lowOrig.charAt(lowOrig.length() - 1 - i);
             
             if(left != right) {
                 palindrome = false;
